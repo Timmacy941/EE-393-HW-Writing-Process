@@ -1,4 +1,4 @@
-# This is the rough draft for the writing process HW assignment
+# This is the revisied document for the writing process HW assignment
 # Zuyan He (Tim)
 # May 2, 2016
 
@@ -7,21 +7,21 @@ The Bauer stereophonic-to-binaural Digital Signal Processing
 
 BS2B Processing
 
-Introduction:
-	When we listen to music with headphones, we usually experience the magic stereo sound from the recording; the sound is spacious with decent clarity. Stereo sound was designed to make the stereo mix to the adaptation of sound for listening of one channel by both ears. As we going from the low end audio market to the mid-high tier audio market, the need of better sounding method is needed. The typical stereo music tends to sound clear and no cross feed between two channels, but it is not the case in reality. The stereo music is fun to listen to, but it is not accurate as what the original recording supposed to be. Thus, Bauer stereophonic to binaural digital signal processing (BS2B) is developed to utilize the accuracy of the sounding in the music recordings.
+# Introduction:
+	When we listen to music with headphones, we experience the magic stereo sound from the typical stereo recordings; the sound is spacious with good clarity. Stereo digital processing was developed to make the stereo mix to the adaptation of sound for listening of one channel by both ears. Getting up from the low end audio market to the mid-high tier audio market, people invest quite a bit in audio devices; the need of better sounding tools are in demand. The typical stereo music tends to sound clear with no cross-feed between two channels, but it is not how to sound perceived by ears in reality. The stereo music is fun to listen to, but it is not as accurate as the original source. Thus, Bauer stereophonic to binaural digital signal processing (BS2B) is developed to utilize the accuracy of the sounding in the music recordings.
 
 # Body I: (Further information about BS2B)
-	So what is Bauer stereophonic to binaural digital signal processing (BS2B)? The BS2B is a tool which can change the digital signal from the typical stereo signal to the binaural signal. In the typical stereo recordings, sound engineers tend to isolate the left and right channel to be perfectly separated from each other. By doing so, they create a wide sound stage for the music with a really good clarity. The missing part is that in reality, what we hear isn’t isolated as what we hear from the stereo music files. What’s missing in the portable headphones and in ear monitors is the sound going from each channel to the opposite ear, arriving at a short time later for the extra distance traveled, and with a bit of high frequency roll-off for the shadowing effect of the head. The time delay to the far ear is somewhat longer at low frequencies than at high frequencies.
+	What is Bauer stereophonic to binaural digital signal processing (BS2B)? The BS2B is a signal processing tool which can modify the digital signal from the typical stereo signal to the binaural signal. In the typical stereo recordings, sound engineers usually isolate the left and right channel to be perfectly separated from each other. By doing so, they create a wide sound stage for the music with a really good clarity. The problem of doing that is what we hear in reality isn’t isolated as what we hear from the stereo music files. What’s missing in the portable headphones and in ear monitors is the sound that going from each channel to the opposite ear, arriving at a short time later for the extra distance traveled, and with a bit of high frequency roll-off for the shadowing effect of the head. The time delay to the far ear is somewhat longer at low frequencies than at high frequencies. In order to perceive the most accurate sounding, BS2B digital signal processing tool is needed.
 
 
 # Body II: (Getting more into the BS2B digital processing)
-	BS2B is developed using a single pole recursive filter which are presented by the following recursion equation:
+	How does BS2B works? BS2B is developed using a single pole recursive filter which are presented by the following recursion equation:
 	O[n] = a0 * I[n] + a1 * I[n-1] + b1 * O[n-1]
 Where the a0, a1, b1 are recursion coefficients, I[n] is an input samples, O[n] is an output (filtered) samples. Filter's response is relay to recursion coefficients.
 
 	Figure 2.1 shows the theoretical frequency response of the BS2B processed signal. “Sum” is the sum of the signal processed by both low-pass and high-pass filters. As figure 2.2 shown, the time delay response is optimized for more accuracy sounding. 
 
-	The results can be separate into three possible versions with difference in different cut-off frequency regions and cross-feed levels.
+	The results can be categorized into three different types based on different cut-off frequency regions and cross-feed levels.
 1) 700 Hz, 4.5 dB - default.
 This setting is closest to the virtual speaker placement with azimuth 30 degrees and the removal of about 3 meters, while listening by headphones.
 2) 700 Hz, 6 dB - most popular.
@@ -29,14 +29,14 @@ This setting is close to the parameters of a Chu Moy's cross-feeder.
 3) 650 Hz, 9.5 dB - making the smallest changes in the original signal only for relaxing listening by headphones.
 This setting is close to the parameters of a cross-feeder implemented in Jan Meier's CORDA amplifiers.
 
-# Body III:
-	In reality, figure 3.1 shows the practical frequency response of the BS2B with Chu Moy’s setting. This is a frequency analysis of white noise signals applied to bs2b. There are three types of white noise signals: 'Mono' is two channel mono signal; 'Independ' is a two channel independent signal; one channel signal. Passing of 'one channel' signal through bs2b are presented as a response of high-boost filter and as a response of low-pass filter.
+# Body III: (How BS2B perform in reality)
+	In reality, figure 3.1 shows the practical frequency response of the BS2B with Chu Moy’s setting. This is a frequency analysis of white noise signals applied to BS2B digital signals tool. There are three types of white noise signals: 'Mono' is two channel mono signal; 'Independ' is a two channel independent signal; one channel signal. Passing of 'one channel' signal through BS2B are presented as a response of high-boost filter and as a response of low-pass filter.
 
 	Figure 3.2 and 3.3 shows the actual frequency analysis of a real stereo signal in contrast with BS2B processed signals. Which the signal is more flat, and evenly distributed.
 
-Conclusion:
-	Should we use BS2B for all music files? No, not necessary. BS2B is indeed a great tool for transform typical stereo music into binaural files, but it is not a must have tool for everybody. For casual users, the typical stereo music is good enough for its clarity and spaciousness. The targeting audience of the BS2B tool is for people who peruse the extreme accuracy of the sounds, like people who are in the audiophile community and willing to chase the finest details and the uncolored tuning sound. 
-	
+# Conclusion:
+	In conclusion, should we use BS2B for all music files to get the accurate sound? No, not necessary. BS2B is indeed a great tool for transform typical stereo music into binaural files, but it is not a must have tool for everybody. For casual users, the typical stereo music files present a wider and more spacious sounding than the BS2B processed music, which is more fun to listen to for most people. The targeting audience of the BS2B tool is those who want the extreme accuracy of the sounds with high quality audio equipment, like people who are in the audiophile community and willing to chase the finest details and the uncolored tuning sound. 
+
 	
 	
 	
